@@ -33,7 +33,7 @@ void draw_broken_line(type_lines pVer)
 	glLineWidth(pVer.point_size);
 	glEnableClientState(GL_VERTEX_ARRAY);
 	glVertexPointer(2, GL_FLOAT, 0, pVer.xy.data());
-	glColor3b(pVer.Color[0], pVer.Color[1], pVer.Color[2]);
+	glColoru3b(pVer.Color[0], pVer.Color[1], pVer.Color[2]);
 	glDrawArrays(GL_LINE_STRIP, 0, pVer.xy.size() / 2);
 	glPointSize((GLfloat)pVer.point_size+5);
 	glBegin(GL_POINTS);
